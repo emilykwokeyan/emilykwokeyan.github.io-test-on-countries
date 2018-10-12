@@ -1,0 +1,92 @@
+<html>
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+<style>
+
+body {
+    background-color: #F0F0F0;
+    width: add a dimension;
+    border: add a dimension add white;
+    padding: add a dimension;
+    margin: add a dimension;
+    color: add a blue
+}
+</style>
+</head>
+<body>
+<div class="container-fluid" id="fullbody">
+
+<br><br>
+<h1>Test your knowledge on different countries!🌍</h1>
+
+<script>
+function myFunction(){
+
+    var score = 0, text;
+
+    a = document.getElementById("Beijing").value;
+    b = document.getElementById("Vienna").value;
+    c = document.getElementById("Copenhagen").value;
+
+    if(a == "Beijing"){
+      score++;
+      console.log("in bj");
+    }
+
+    if(b == "Vienna"){
+      score++;
+    }
+
+    if(c == "Copenhagen"){
+      score++;
+    }
+
+    if(score == 3) {
+	      text = "You got it ALL RIGHT! Congrats🎉"
+
+    } else {
+      var display = "Your answers are: " + a + "," + b + "," + c + "<br>";
+	     text = "Your score was " + score + "/3. Better luck next time!💪The correct answers are Beijing, Vienna and Copenhagen."
+    }
+    document.getElementById("demo").innerHTML = text;
+}
+
+</script>
+<form>
+
+  <br>
+  Question 1: <br>
+  What is the capital city of China🇨🇳?<br>
+
+  Your answer:<br>
+  <input  type="text" id="Beijing">
+  <br><br>
+
+
+  Question 2: <br>
+  What is the capital city of Austria🇦🇹?<br>
+
+  Your answer:<br>
+  <input type="text" id="Vienna">
+  <br><br>
+
+  Question 3: <br>
+  What is the capital city of Denmark🇩🇰?<br>
+
+  Your answer:<br>
+  <input type="text" id="Copenhagen">
+  <br><br>
+
+  <button type="button" class="btn btn-primary" onclick="myFunction()">See if you're getting them right!</button>
+</form>
+
+<br><br>
+<div id="demo"></div>
+</div>
+
+
+</body>
+</html>
